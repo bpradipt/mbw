@@ -13,3 +13,7 @@ ${TARFILE}: clean
 
 rpm: ${TARFILE}
 	 rpmbuild -ta ${NAME}.tar.gz 
+
+install: 
+	gcc mbw.c -o ${NAME}
+	cp ${NAME} /usr/bin
